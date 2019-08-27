@@ -10,11 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var emailAdress: UITextField!
+    @IBOutlet weak var password: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBOutlet weak var singInButton: UIButton!
+    @IBAction func singinBtnPressed(_ sender: Any) {
+        guard let userNameText = emailAdress.text, !userNameText.isEmpty else {
+            displayAlert(with: "You didn't enter your User Name")
+            return
+        }
+        guard let userPassword = password.text, !userPassword.isEmpty else {
+            displayAlert(with: "You didn't enter Password")
+            return
+        }
+        
+        
+    }
+    
+    private func displayAlert(with message: String) {
+        let alert = UIAlertController(title: message, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction.init(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
 }
 
