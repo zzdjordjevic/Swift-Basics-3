@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Biq-8Y-xXa">
-                                <rect key="frame" x="37" y="166" width="301" height="30"/>
+                                <rect key="frame" x="37" y="166" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1OQ-HV-fUQ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="301" id="6AP-cr-IgP"/>
@@ -30,7 +30,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Opj-TZ-wBj">
-                                <rect key="frame" x="37" y="226" width="301" height="30"/>
+                                <rect key="frame" x="37" y="226" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="301" id="3K3-qq-hw5"/>
                                 </constraints>
@@ -47,6 +47,7 @@
                                 </state>
                                 <connections>
                                     <action selector="singinBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSl-TV-k1T"/>
+                                    <segue destination="UPn-Et-m8f" kind="presentation" id="TQk-Vq-7m5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNL-EA-VPd">
@@ -56,6 +57,9 @@
                                 <state key="normal" title="Sing Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="frZ-gF-cGR" kind="presentation" id="AgD-rJ-LeQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.64806058909999997" green="0.36329883499999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCr-ty-7KJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.681159420289859" y="678.34821428571422"/>
+            <point key="canvasLocation" x="451" y="747"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n3n-mw-ekQ">
@@ -169,6 +173,9 @@
                                 <state key="normal" title="Sing Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="UPn-Et-m8f" kind="presentation" id="3pw-fN-ZkN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.64806058909999997" green="0.36329883499999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,4 +187,7 @@
             <point key="canvasLocation" x="866.66666666666674" y="18.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TQk-Vq-7m5"/>
+    </inferredMetricsTieBreakers>
 </document>
