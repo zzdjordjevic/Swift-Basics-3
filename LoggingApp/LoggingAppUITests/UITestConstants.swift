@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+public struct LogInPageElements {
+    static let singInButton = "Sing In"
+    static let singUpButton = "Sing Up"
+}

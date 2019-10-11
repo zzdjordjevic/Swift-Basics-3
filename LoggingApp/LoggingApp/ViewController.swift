@@ -19,18 +19,6 @@ class ViewController: UIViewController {
 
 
     @IBOutlet weak var singInButton: UIButton!
-    @IBAction func singinBtnPressed(_ sender: Any) {
-        guard let userNameText = emailAdress.text, !userNameText.isEmpty else {
-            displayAlert(with: "You didn't enter your User Name")
-            return
-        }
-        guard let userPassword = password.text, !userPassword.isEmpty else {
-            displayAlert(with: "You didn't enter Password")
-            return
-        }
-        
-        
-    }
     
     private func displayAlert(with message: String) {
         let alert = UIAlertController(title: message, message: message, preferredStyle: .alert)
@@ -38,6 +26,26 @@ class ViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
     }
+    
+    // MARK: - Navigation
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "performLoginSegue" {
+            guard let userNameText = emailAdress.text, !userNameText.isEmpty else {
+                displayAlert(with: "You didn't enter your User Name")
+                return false
+            }
+            guard let userPassword = password.text, !userPassword.isEmpty else {
+                displayAlert(with: "You didn't enter Password")
+                return false
+            }
+            return true
+
+        }
+        return true
+    }
+    
+    
     
     
 }
