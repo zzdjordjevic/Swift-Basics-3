@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1870645E23574C4200542E61 /* XCUIElement+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870645D23574C4200542E61 /* XCUIElement+Additions.swift */; };
 		18A358D82350BEB80010B21F /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A358D72350BEB80010B21F /* LogIn.swift */; };
+		18B7067223560CAA00371D76 /* LogIn+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7067123560CAA00371D76 /* LogIn+Helpers.swift */; };
 		18C010FC2343670B002BFE7D /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C010FB2343670B002BFE7D /* RegisterPageViewController.swift */; };
+		18E752A22354B56200355507 /* SingInScreenElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E752A12354B56200355507 /* SingInScreenElements.swift */; };
 		18E779452345F35F008C33D1 /* UITestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E779442345F35F008C33D1 /* UITestConstants.swift */; };
 		4C0A967A2315311E008C884F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A96792315311E008C884F /* AppDelegate.swift */; };
 		4C0A967C2315311E008C884F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A967B2315311E008C884F /* ViewController.swift */; };
@@ -38,8 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1870645D23574C4200542E61 /* XCUIElement+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Additions.swift"; sourceTree = "<group>"; };
 		18A358D72350BEB80010B21F /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		18B7067123560CAA00371D76 /* LogIn+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogIn+Helpers.swift"; sourceTree = "<group>"; };
 		18C010FB2343670B002BFE7D /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		18E752A12354B56200355507 /* SingInScreenElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInScreenElements.swift; sourceTree = "<group>"; };
 		18E779442345F35F008C33D1 /* UITestConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestConstants.swift; sourceTree = "<group>"; };
 		4C0A96762315311E008C884F /* LoggingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoggingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0A96792315311E008C884F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,12 +88,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1870645C23574B2300542E61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1870645D23574C4200542E61 /* XCUIElement+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		18A358D42350BCE40010B21F /* SingIn */ = {
 			isa = PBXGroup;
 			children = (
 				18A358D72350BEB80010B21F /* LogIn.swift */,
+				18B7067123560CAA00371D76 /* LogIn+Helpers.swift */,
 			);
 			path = SingIn;
+			sourceTree = "<group>";
+		};
+		18E752A02354B4D800355507 /* Accessibility Identifiers */ = {
+			isa = PBXGroup;
+			children = (
+				18E752A12354B56200355507 /* SingInScreenElements.swift */,
+			);
+			path = "Accessibility Identifiers";
 			sourceTree = "<group>";
 		};
 		4C0A966D2315311E008C884F = {
@@ -137,6 +160,8 @@
 		4C0A969B23153120008C884F /* LoggingAppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				1870645C23574B2300542E61 /* Extensions */,
+				18E752A02354B4D800355507 /* Accessibility Identifiers */,
 				18A358D42350BCE40010B21F /* SingIn */,
 				4C0A969C23153120008C884F /* LoggingAppUITests.swift */,
 				18E779442345F35F008C33D1 /* UITestConstants.swift */,
@@ -297,7 +322,10 @@
 			files = (
 				4C0A969D23153120008C884F /* LoggingAppUITests.swift in Sources */,
 				18A358D82350BEB80010B21F /* LogIn.swift in Sources */,
+				18E752A22354B56200355507 /* SingInScreenElements.swift in Sources */,
+				1870645E23574C4200542E61 /* XCUIElement+Additions.swift in Sources */,
 				18E779452345F35F008C33D1 /* UITestConstants.swift in Sources */,
+				18B7067223560CAA00371D76 /* LogIn+Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

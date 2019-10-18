@@ -36,10 +36,10 @@ class LoggingAppUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testSingInPageElements() {
-        
-        
-    }
+//    func testSingInPageElements() {
+//        
+//        
+//    }
     
     // Tap Sing In Button
 //    func testTapButton() {

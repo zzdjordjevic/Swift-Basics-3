@@ -10,42 +10,70 @@ import XCTest
 
 class LogIn: LoggingAppUITests {
     
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-//        var app = XCUIApplication()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-//    func testExample() {
-//        // Use recording to get started writing UI tests.
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    }
     
+    func testSingInPageElements() {
+          let app = XCUIApplication()
+        
+          XCTAssert(app.textFields[SingInScreenElements.userNameSingInTextField].exists,
+                    "User Name")
+          XCTAssert(app.textFields[SingInScreenElements.passwordSingInTextField].exists,
+                    "Password")
+          XCTAssert(app.buttons[LogInPageElements.singInButton].exists,
+                    "Sing In")
+          XCTAssert(app.staticTexts[SingInScreenElements.staticTextAccount].exists,
+                    "Don't have an account?")
+          XCTAssert(app.buttons[LogInPageElements.singUpButton].exists,
+                    "Sing Up")
+      }
     
         func testTapSingInButton() {
                 let appTest = XCUIApplication()
                 let tapButton = appTest.buttons[LogInPageElements.singInButton]
                 tapButton.tap()
             }
-    
+
     func testSingUpButton() {
         let app = XCUIApplication()
         let tapButton = app.buttons[LogInPageElements.singUpButton]
         tapButton.tap()
     }
+
+    func testSingIn(){
+        let app = XCUIApplication()
+        app.textFields[SingInScreenElements.userNameSingInTextField].tap()
+        
+        XCTAssertTrue(app.keyboards.firstMatch.exists)
+        enterUserName(nameToEnter: ValidationData.nameForUser)
+        
+        app.textFields[SingInScreenElements.passwordSingInTextField].tap()
+        
+        enterPassword(passwordToEnter: ValidationData.pass)
+        
+        app.buttons[LogInPageElements.singInButton].tap()
+
+    }
+    
+    func testSingInWithoutPassword() {
+        let app = XCUIApplication()
+        app.textFields[SingInScreenElements.userNameSingInTextField].tap()
+        
+        enterUserName(nameToEnter: ValidationData.nameForUser)
+        
+        app.buttons[LogInPageElements.singInButton].tap()
+        
+        app.buttons.element(boundBy: 2).tap()
+    }
+    
+    func testSingInWithoutUserName() {
+        let app = XCUIApplication()
+        
+    }
     
     
     
+}
+
+public struct ValidationData {
+    static let nameForUser = "Miki Maus"
+    static let pass = "1234"
 }
